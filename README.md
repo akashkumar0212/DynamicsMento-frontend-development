@@ -1,16 +1,44 @@
-# React + Vite
+# DynamicsMento Frontend Development
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend web application for DynamicsMento, built using **React**, **Vite**, and **NPM** with Hot Module Replacement (HMR) and ESLint.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Getting Started
 
-## React Compiler
+Follow these steps to set up the project on your local machine.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📋 Prerequisites
+Ensure you have **Node.js** installed globally. Check your version with:
+```bash
+node -v
+```
 
-## Expanding the ESLint configuration
+### 🛠️ Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install Dependencies**  
+   The library packages are not saved in the repository. Generate your local workspace by running:
+   ```bash
+   npm install
+   ```
+
+2. **Run Local Server**  
+   Start the Vite development server:
+   ```bash
+   npm run dev
+   ```
+   *Open the URL shown in your terminal (usually `http://localhost:5173`) to view the application.*
+
+---
+
+## 🔧 Technical Stack Details
+
+This workspace uses the official Vite ecosystem configuration:
+* **Bundler & Server**: Vite with fast Hot Module Replacement (HMR).
+* **Compiler**: Powered by `@vitejs/plugin-react` using [Oxc](https://oxc.rs).
+* **Code Quality**: ESLint configuration is set up locally to enforce strict code rules.
+
+### 📦 Available Scripts
+* `npm run dev` - Starts development server.
+* `npm run build` - Compiles production-ready static assets into the `dist/` directory.
+* `npm run lint` - Code syntax check.
