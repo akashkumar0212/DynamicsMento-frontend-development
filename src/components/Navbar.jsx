@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon, ChevronDown, Cpu, Cloud, Database, BarChart3, HelpCircle, Compass, ArrowRight } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { cn } from "@/lib/utils";
+import faviconLogo from '../assets/favicon.png';
 
 const solutions = [
   { name: "D365 CRM", path: "/solutions/d365-crm", description: "Customer relationship management optimization", icon: HelpCircle },
@@ -44,18 +45,23 @@ export default function Navbar() {
           : "py-5 bg-transparent border-b border-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-2 md:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2.5 group">
-          <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300">
-            <Cpu className="h-5.5 w-5.5 animate-pulse" />
-          </div>
+        {/* Visual Container for the PNG Logo */}
+      <div className="h-12 w-20 rounded-xl bg-slate-50 dark:bg-slate-500 flex items-center justify-center p-0.1 shadow-md group-hover:scale-105 transition-transform duration-200">
+        <img 
+          src={faviconLogo} 
+          alt="Dynamics Mento Logo" 
+          className="h-full w-full object-contain"
+        />
+      </div>
           <div>
             <span className="font-heading text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-slate-500 to-slate-900 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
               DYNAMICS
             </span>
             <span className="font-heading text-lg md:text-xl font-medium tracking-tight text-blue-600 dark:text-blue-400 ml-1">
-              MENTOS
+              MENTO
             </span>
           </div>
         </Link>

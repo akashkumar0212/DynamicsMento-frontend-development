@@ -105,7 +105,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
             >
-              Dynamics Mentos partners with enterprises to build and scale ERP, CRM, SAP, and advanced AI architectures. Secure, robust, and designed for tomorrow.
+              Dynamics Mento provide best-in-class industry solutions built on Microsoft’s Dynamics 365 Business Applications platform, and extended via industry-specific applications from Dynamics Mento and our partners to meet your unique requirements.
             </motion.p>
 
             <motion.div 

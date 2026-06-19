@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Cpu, Mail, Phone, MapPin,} from "lucide-react";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
-
+import faviconLogo from '../assets/favicon.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,15 +14,20 @@ export default function Footer() {
         {/* Company Info */}
         <div className="lg:col-span-2 space-y-6">
           <Link to="/" className="flex items-center space-x-2.5">
-            <div className="h-9 w-9 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-md">
-              <Cpu className="h-5 w-5" />
+            {/* Updated Container for the PNG Logo */}
+            <div className="h-10 w-15 rounded-lg bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-0.1 shadow-md group-hover:scale-105 transition-transform duration-300">
+              <img 
+                src={faviconLogo} 
+                alt="Dynamics Mento Logo" 
+                className="h-full w-full object-contain" 
+              />
             </div>
             <div>
               <span className="font-heading text-lg font-bold tracking-tight text-slate-700 dark:text-white">
                 DYNAMICS
               </span>
               <span className="font-heading text-lg font-medium tracking-tight text-blue-500 dark:text-blue-400 ml-1">
-                MENTOS
+                MENTO
               </span>
             </div>
           </Link>
@@ -137,12 +142,12 @@ export default function Footer() {
               <span>Office 228, Orbit Plaza, Crossing Republik, Ghaziabad,  UP, India</span>
             </li>
             <li className="flex items-center space-x-2.5">
-              <Phone className="h-4.5 w-4.5 text-primary shrink-0" />
-              <span>+91 (70338 90007)</span>
+              <Phone className="h-8 w-4.5 text-primary shrink-0" />
+              <span>+91 (120 4481981)</span>
             </li>
             <li className="flex items-center space-x-2.5">
-              <Mail className="h-4.5 w-4.5 text-primary shrink-0" />
-              <span>consulting@dynamicsmentos.com</span>
+              <Mail className="h-8 w-4.5 text-primary shrink-0" />
+              <span>info@dynamicsmento.com</span>
             </li>
           </ul>
         </div>

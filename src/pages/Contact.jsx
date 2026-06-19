@@ -47,23 +47,23 @@ export default function Contact() {
             <div className="flex items-start space-x-3.5">
               <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
               <div>
-                <div className="font-bold text-foreground">Silicon Valley Headquarters</div>
-                <div>100 Enterprise Way, Suite 400</div>
-                <div>Silicon Valley, CA 94025</div>
+                <div className="font-bold text-foreground">Orbit Plaza</div>
+                <div>Crossing Republik, Ghaziabad</div>
+                <div>UP 201016, India</div>
               </div>
             </div>
             <div className="flex items-center space-x-3.5">
               <Phone className="h-5 w-5 text-primary shrink-0" />
               <div>
                 <div className="font-bold text-foreground">Dedicated Support</div>
-                <div>+1 (800) 555-0199</div>
+                <div>+91 (78930 17765)</div>
               </div>
             </div>
             <div className="flex items-center space-x-3.5">
               <Mail className="h-5 w-5 text-primary shrink-0" />
               <div>
                 <div className="font-bold text-foreground">Consultation Enquiries</div>
-                <div>consulting@dynamicsmentos.com</div>
+                <div>info@dynamicsmento.com</div>
               </div>
             </div>
           </div>
