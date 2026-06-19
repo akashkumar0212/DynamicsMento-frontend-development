@@ -19,29 +19,29 @@ const services = [
     link: "/solutions/d365-finops"
   },
   {
-    name: "ERP Solutions",
+    name: "Business Central",
     description: "Bespoke systems integrating production, human resources, finance, and logistics. Drive transparency and agility across your enterprise operations.",
     icon: Database,
     color: "from-purple-500 to-pink-500",
     link: "/solutions/erp"
   },
   {
-    name: "SAP Solutions",
+    name: "Copilot & AI Solutions",
     description: "Accelerate migration to S/4HANA, optimize existing landscapes, and integrate cloud services with global SAP architectures.",
     icon: Compass,
     color: "from-pink-500 to-red-500",
     link: "/solutions/sap"
   },
   {
-    name: "AI Solutions",
-    description: "Deploy large language models, agentic workflows, and automated vision/anomaly detection. Modernize decision-making with custom, secure AI models.",
+    name: "Power Platform & Power Automate",
+    description: "Build apps, automate workflows, and visualise data with Microsoft Power Platform and Power BI.",
     icon: Cpu,
     color: "from-teal-500 to-emerald-500",
     link: "/solutions/ai"
   },
   {
-    name: "Cloud Transformation",
-    description: "Migrate legacy databases to secure AWS, Azure, or GCP environments. Implement zero-downtime, fully scalable modern serverless setups.",
+    name: "Finance Transformation",
+    description: "Modernise, automate, and streamline your finance function with the power of Dynamics 365 and digital solutions.",
     icon: Cloud,
     color: "from-emerald-500 to-blue-500",
     link: "/solutions/cloud"
