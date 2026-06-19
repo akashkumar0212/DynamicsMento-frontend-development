@@ -9,10 +9,10 @@ import faviconLogo from '../assets/favicon.png';
 const solutions = [
   { name: "D365 CRM", path: "/solutions/d365-crm", description: "Customer relationship management optimization", icon: HelpCircle },
   { name: "D365 FinOps", path: "/solutions/d365-finops", description: "Finance and operations ERP automation", icon: BarChart3 },
-  { name: "ERP Solutions", path: "/solutions/erp", description: "Integrated enterprise resource planning", icon: Database },
-  { name: "SAP Solutions", path: "/solutions/sap", description: "Strategic SAP architecture & migrations", icon: Compass },
-  { name: "AI Solutions", path: "/solutions/ai", description: "Next-gen intelligent models & agents", icon: Cpu },
-  { name: "Cloud Transformation", path: "/solutions/cloud", description: "Secure, scalable cloud environments", icon: Cloud },
+  { name: "Business Central", path: "/solutions/erp", description: "Integrated enterprise resource planning", icon: Database },
+  { name: "Copilot & AI Solutions", path: "/solutions/sap", description: "Strategic SAP architecture & migrations", icon: Compass },
+  { name: "Power Platform & Power Automate", path: "/solutions/ai", description: "Next-gen intelligent models & agents", icon: Cpu },
+  { name: "Finance Transformation", path: "/solutions/cloud", description: "Modernise, automate, and streamline your finance function", icon: BarChart3 },
 ];
 
 export default function Navbar() {

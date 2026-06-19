@@ -8,78 +8,78 @@ const solutionData = {
     name: "D365 CRM",
     title: "Dynamics 365 Customer Relationship Management",
     icon: HelpCircle,
-    desc: "Align your marketing, sales, and support operations under a single, unified data model. Power deep client interactions and drive automation.",
+    desc: "Microsoft Dynamics 365 is a powerful suite of intelligent business applications that helps organizations streamline operations, strengthen customer relationships, and accelerate digital transformation.",
     features: [
-      "Omnichannel Sales Automation pipelines",
-      "Unified Customer Service dashboard frameworks",
-      "Real-time analytics and predictive scoring models",
-      "Custom integration with power platform tools",
-      "Mobile access with offline sync capabilities"
+      "Unified CRM and ERP Platform",
+      "AI-Powered Insights and Automation",
+      "Enhanced Customer Engagement",
+      "Improved Operational Efficiency",
+      "Seamless Integration with Microsoft 365 and Power Platform"
     ]
   },
   "d365-finops": {
     name: "D365 FinOps",
     title: "Dynamics 365 Finance & Operations",
     icon: BarChart3,
-    desc: "Unify financial analytics, automate supply chain processes, and digitize enterprise resource workflows.",
+    desc: "Microsoft Dynamics 365 Finance & Operations (FinOps) is a comprehensive enterprise solution that helps organizations manage financial processes, optimize operations, and accelerate business growth. Designed for medium and large enterprises, it provides a unified platform to streamline finance, supply chain, manufacturing, procurement, and business operations while delivering real-time visibility and actionable insights.",
     features: [
-      "Real-time general ledger financial consolidation",
-      "Automated procurement and inventory tracking",
-      "Global asset management dashboards",
-      "Intelligent warehouse routing management",
-      "Cross-border fiscal regulation automation models"
+      "Unified Financial and Operational Management",
+      "Automated Accounting and Financial Processes",
+      "Supply Chain and Inventory Optimization",
+      "Budgeting, Forecasting, and Financial Control",
+      "Global Multi-Entity and Multi-Currency Support"
     ]
   },
   "erp": {
-    name: "ERP Solutions",
-    title: "Enterprise Resource Planning Modernization",
+    name: "Business Central",
+    title: "Centralised ERP for SMBs to streamline finance, operations & sales.",
     icon: Database,
-    desc: "Consolidate accounting, manufacturing, human resources, and supply chains into a single high-performance ERP system.",
+    desc: "Microsoft Dynamics 365 Business Central is an all-in-one business management solution designed to help small and mid-sized businesses streamline operations, enhance productivity, and make smarter decisions. By connecting finance, sales, purchasing, inventory, projects, and customer service into a single platform, Business Central provides complete visibility across your organization.",
     features: [
-      "Tailored custom system modules and integrations",
-      "Robust data synchronization across databases",
-      "Automated regulatory compliance reporting",
-      "Advanced workflow management pipelines",
-      "Scalable database clustering and performance tuning"
+      "Easily integrate with Microsoft 365, Power Platform, and other business applications",
+      "Increase operational efficiency with automated processes",
+      "Improve financial control and cash flow management",
+      "Enhance inventory accuracy and supply chain efficiency",
+      "Real-Time Reporting and Analytics"
     ]
   },
   "sap": {
-    name: "SAP Solutions",
-    title: "SAP Strategy & S/4HANA Transformation",
+    name: "Copilot & AI Solutions",
+    title: "Transform Business Operations with Copilot & AI Agents",
     icon: Compass,
-    desc: "Optimize your SAP landscapes. Transition securely to S/4HANA, configure hybrid architectures, and scale operations.",
+    desc: "Harness the potential of AI-driven innovation with our Copilot and AI Solutions. We help organizations leverage intelligent assistants, AI agents, and automation technologies to streamline operations, enhance productivity, and deliver exceptional customer experiences.",
     features: [
-      "SAP S/4HANA migration blueprinting & execution",
-      "Custom ABAP application optimization & refactoring",
-      "Cloud platform integration (BTP, Azure, AWS)",
-      "System landscape consolidation and cleanup",
-      "SAP Fiori custom user experience design"
+      "Automate Repetitive and Time-Consuming Tasks",
+      "Enhance Customer Engagement and Support",
+      "Improve Data Accessibility and Knowledge Sharing",
+      "Scale Operations with Intelligent Automation",
+      "Reduce Operational Costs"
     ]
   },
   "ai": {
-    name: "AI Solutions",
-    title: "Next-Gen Artificial Intelligence & Automation",
+    name: "Power Platform & Power Automate",
+    title: "Enterprise Automation & Low-Code Development Services",
     icon: Cpu,
-    desc: "Deploy intelligent automation. Build LLMs, fine-tune models, and configure generative pipelines within secure boundaries.",
+    desc: "Microsoft Power Platform is a powerful suite of low-code tools that enables organizations to build custom applications, automate business processes, analyze data, and create intelligent digital experiences with speed and efficiency.",
     features: [
-      "Custom LLM fine-tuning for domain knowledge bases",
-      "Intelligent workflow automation and agentic systems",
-      "Real-time predictive anomaly detection models",
-      "Computer vision systems for quality audit inspections",
-      "Secure hosting and vector database integration"
+      "Rapid Low-Code Application Development",
+      "Seamless Integration with Microsoft 365 and Dynamics 365",
+      "Faster Time-to-Market for Business Applications",
+      "Scalable and Secure Cloud-Based Solutions",
+      "Increased Productivity and Efficiency"
     ]
   },
   "cloud": {
-    name: "Cloud Transformation",
-    title: "Enterprise Cloud Infrastructure & Migration",
+    name: "Finance Transformation",
+    title: "Modernize Financial Operations with Dynamics 365 Finance",
     icon: Cloud,
-    desc: "Accelerate your cloud journey. Re-platform legacy systems to resilient, auto-scaling cloud environments.",
+    desc: " Finance Transformation is the process of reimagining and modernizing financial operations to improve efficiency, accuracy, compliance, and strategic decision-making. We help organizations transform traditional finance functions into intelligent, data-driven, and automated systems that support business growth and agility.",
     features: [
-      "Multi-cloud architectures (AWS, Azure, GCP)",
-      "Zero-downtime database and system migrations",
-      "Serverless scaling infrastructure configuration",
-      "DevSecOps automation pipelines and monitoring",
-      "Cost optimization audits and architectural refactoring"
+      "Streamlined and Automated Financial Processes",
+      "Improved Accuracy and Reduced Manual Effort",
+      "Enhanced Collaboration Across Finance Teams",
+      "Faster Month-End and Year-End Closing",
+      "Stronger Compliance and Risk Control"
     ]
   }
 };

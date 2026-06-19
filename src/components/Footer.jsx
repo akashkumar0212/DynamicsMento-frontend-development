@@ -81,22 +81,22 @@ export default function Footer() {
             </li>
             <li>
               <Link to="/solutions/erp" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                ERP Solutions
+                Business Central
               </Link>
             </li>
             <li>
               <Link to="/solutions/sap" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                SAP Solutions
+                Copilot & AI Solutions
               </Link>
             </li>
             <li>
               <Link to="/solutions/ai" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                AI Solutions
+                Power Platform & Power Automate
               </Link>
             </li>
             <li>
               <Link to="/solutions/cloud" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Cloud Transformation
+                Finance Transformation
               </Link>
             </li>
           </ul>

@@ -59,7 +59,7 @@ export default function About() {
           </ul>
         </div>
         <div className="glass-card rounded-3xl p-8 border flex flex-col justify-center text-center space-y-4 min-h-[250px]">
-          <div className="text-4xl font-extrabold text-blue-600 dark:text-blue-400">15+ Years</div>
+          <div className="text-4xl font-extrabold text-blue-600 dark:text-blue-400">22+ Years</div>
           <div className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Architecting Corporate Success</div>
         </div>
       </section>
