@@ -119,7 +119,7 @@ export default function SolutionDetail() {
         
         {/* Solution Head */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="h-14 w-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shadow-sm">
+          <div className="h-14 w-14 rounded-2xl bg-white text-black flex items-center justify-center shadow-sm">
             <Icon className="h-7 w-7" />
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight font-heading leading-tight">
@@ -136,7 +136,7 @@ export default function SolutionDetail() {
           <ul className="space-y-4">
             {solution.features.map((feature, idx) => (
               <li key={idx} className="flex items-start space-x-3">
-                <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
                 <span className="text-sm text-foreground leading-normal">{feature}</span>
               </li>
             ))}
@@ -148,8 +148,8 @@ export default function SolutionDetail() {
       {/* CTA Box */}
       <div className="rounded-3xl bg-slate-50 dark:bg-[#070b15] border p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 transition-colors duration-300">
         <div className="space-y-2 text-left">
-          <h4 className="font-heading font-bold text-xl">Need consultation on {solution.name}?</h4>
-          <p className="text-sm text-muted-foreground max-w-md">
+          <h4 className="font-heading font-bold text-black/70">Need consultation on {solution.name}?</h4>
+          <p className="text-sm text-black/80 max-w-md">
             Connect with our lead systems architects to review specifications, timelines, and budgets.
           </p>
         </div>

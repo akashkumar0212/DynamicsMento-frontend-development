@@ -47,34 +47,27 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-2 md:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2.5 group">
-        {/* Visual Container for the PNG Logo */}
-      <div className="h-12 w-20 rounded-xl bg-slate-50 dark:bg-slate-500 flex items-center justify-center p-0.1 shadow-md group-hover:scale-105 transition-transform duration-200">
-        <img 
-          src={faviconLogo} 
-          alt="Dynamics Mento Logo" 
-          className="h-full w-full object-contain"
-        />
-      </div>
-          <div>
-            <span className="font-heading text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-slate-500 to-slate-900 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-              DYNAMICS
-            </span>
-            <span className="font-heading text-lg md:text-xl font-medium tracking-tight text-blue-600 dark:text-blue-400 ml-1">
-              MENTO
-            </span>
-          </div>
-        </Link>
+        <Link to="/" className="flex items-center space-x-3">
+        <div className="h-12 w-16 rounded-xl bg-white flex items-center justify-center p-1 shadow-lg">
+          <img 
+            src={faviconLogo}
+            alt="Dynamics Mento Logo"
+            className="h-full w-full object-contain"
+          />
+        </div>
+        <div className="flex items-center">
+          <span className="font-heading text-lg font-extrabold tracking-tight text-black dark:text-white">
+            DYNAMICS
+          </span>
+          <span className="font-heading text-lg font-extrabold tracking-tight text-blue-600 dark:text-blue-400 ml-1">
+            MENTO
+          </span>
+        </div>
+      </Link>
 
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link 
-            to="/" 
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              location.pathname === "/" ? "text-primary" : "text-muted-foreground"
-            )}
-          >
+          <Link to="/" className={cn("text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-white",location.pathname === "/" ? "text-blue-600 dark:text-white" : "text-slate-600 dark:text-slate-300")}>
             Home
           </Link>
 
@@ -84,10 +77,10 @@ export default function Navbar() {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-1.5 focus:outline-none">
-              <span>Solutions</span>
-              <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", isDropdownOpen && "rotate-180")} />
-            </button>
+          <button className="flex items-center space-x-1 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors py-1.5 focus:outline-none">
+            <span>Solutions</span>
+            <ChevronDown className={cn("h-4 w-4 transition-transform duration-200",isDropdownOpen && "rotate-180")} />
+          </button>
 
             {/* Dropdown Menu */}
             <AnimatePresence>
@@ -123,31 +116,13 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <Link 
-            to="/about" 
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              location.pathname === "/about" ? "text-primary" : "text-muted-foreground"
-            )}
-          >
+          <Link to="/about" className={cn("text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-white",location.pathname === "/about" ? "text-blue-600 dark:text-white" : "text-slate-600 dark:text-slate-300")}>
             About
           </Link>
-          <Link 
-            to="/case-studies" 
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              location.pathname === "/case-studies" ? "text-primary" : "text-muted-foreground"
-            )}
-          >
+          <Link to="/case-studies" className={cn("text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-white",location.pathname === "/case-studies" ? "text-blue-600 dark:text-white" : "text-slate-600 dark:text-slate-300")}>
             Case Studies
           </Link>
-          <Link 
-            to="/contact" 
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              location.pathname === "/contact" ? "text-primary" : "text-muted-foreground"
-            )}
-          >
+          <Link to="/contact" className={cn("text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-white",location.pathname === "/contact" ? "text-blue-600 dark:text-white" : "text-slate-600 dark:text-slate-300")}>
             Contact
           </Link>
         </nav>
@@ -219,7 +194,7 @@ export default function Navbar() {
                     <Link
                       key={item.name}
                       to={item.path}
-                      className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center space-x-2"
+                      className="text-sm font-medium text-muted-foreground hover:text-White transition-colors flex items-center space-x-2"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                       <span>{item.name}</span>

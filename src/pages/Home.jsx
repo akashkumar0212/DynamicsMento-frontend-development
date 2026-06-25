@@ -123,7 +123,7 @@ export default function Home() {
               </Link>
               <a 
                 href="#services" 
-                className="px-6 py-3.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/5 text-foreground font-semibold transition-all duration-300"
+                className="px-6 py-3.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white hover:text-black/50 text-foreground font-semibold transition-all duration-500"
               >
                 Explore Offerings
               </a>
@@ -190,27 +190,23 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 border-y border-slate-200 dark:border-white/5 bg-slate-50/50 dark:bg-[#080d19]/20 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, idx) => (
-              <motion.div 
-                key={stat.label}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="text-center space-y-1.5"
-              >
-                <div className="text-3xl md:text-4xl font-extrabold text-blue-600 dark:text-blue-400 font-heading">
-                  {stat.value}
-                </div>
-                <div className="text-xs md:text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+      <section className=" py-16 bg-gradient-to-br from-white via-slate-50 to-blue-50/70 dark:from-[#111827] dark:via-[#0f172a] dark:to-[#111827] border-y border-slate-200/80 dark:border-white/10 transition-colors duration-300">
+
+        <div className=" max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-8" >
+          {stats.map((stat) => (
+
+            <div key={stat.label}
+              className=" rounded-2xl p-6 text-center bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-slate-200 dark:border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+              <h3 className=" text-4xl font-extrabold tracking-tight text-blue-600 dark:text-blue-400 ">
+                {stat.value}
+              </h3>
+              <p
+                className=" mt-3 text-sm font-semibold uppercase  tracking-wide text-slate-600 dark:text-slate-300 " >
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -266,76 +262,145 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Enterprise Trust Section */}
-      <section className="py-24 bg-slate-50/50 dark:bg-[#070b15]/40 border-y border-slate-200 dark:border-white/5 transition-colors duration-300">
+        {/* Enterprise Trust Section */}
+      <section
+        className=" py-24 bg-gradient-to-br from-white via-slate-50 to-blue-50/70 dark:from-[#111827] dark:via-[#0f172a] dark:to-[#111827] border-y border-slate-200/80 dark:border-white/10 transition-colors  duration-300 "
+      >
         <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
+          {/* Left Content */}
           <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-xs font-bold uppercase text-primary tracking-wider">Enterprise Framework</h2>
-              <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-                Architected for High Scale and Security
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Modern enterprise applications require robust foundations. We integrate the best industry practices to ensure continuous scalability, zero data loss, and real-time operations.
-              </p>
-            </div>
 
             <div className="space-y-4">
+
+              <h2 className="  text-xs font-bold uppercase text-primary tracking-wider" >
+                Enterprise Framework
+              </h2>
+              <h3
+                className=" text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 dark:text-white" >
+                Architected for High Scale and Security
+              </h3>
+              <p className=" text-slate-600 dark:text-slate-300 leading-relaxed text-base max-w-xl" >
+                Modern enterprise applications require robust foundations.
+                We integrate the best industry practices to ensure continuous
+                scalability, zero data loss, and real-time operations.
+              </p>
+            </div>
+            <div className="space-y-5">
               {[
-                { title: "Strategic Mentors", desc: "Certified architects leading multi-tier global architectures." },
-                { title: "Continuous Delivery", desc: "Automated pipeline management ensuring zero disruption." },
-                { title: "Regulatory Alignment", desc: "Compliance with GDPR, HIPAA, and industry-specific protocols." }
-              ].map((item, idx) => (
-                <div key={item.title} className="flex items-start space-x-3.5">
-                  <div className="h-6 w-6 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
+                {
+                  title: "Strategic Mentors",
+                  desc: "Certified architects leading multi-tier global architectures."
+                },
+                {
+                  title: "Continuous Delivery",
+                  desc: "Automated pipeline management ensuring zero disruption."
+                },
+                {
+                  title: "Regulatory Alignment",
+                  desc: "Compliance with GDPR, HIPAA, and industry-specific protocols."
+                }
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className=" flex items-start gap-3.5">
+                  <div className=" h-6 w-6 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="h-4 w-4" />
                   </div>
                   <div>
-                    <h4 className="text-base font-bold font-heading text-slate-900 dark:text-white">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground mt-0.5">{item.desc}</p>
+                    <h4 className=" text-base font-bold font-heading text-slate-950 dark:text-white">
+                      {item.title}
+                    </h4>
+                    <p className=" text-sm text-slate-600 dark:text-slate-300 mt-1 ">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right side graphic or image */}
+          {/* Right Audit Card */}
           <div className="relative flex justify-center">
-            {/* Grid graphic */}
-            <div className="absolute inset-0 bg-grid-pattern opacity-40 -z-10" />
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="glass-card rounded-3xl p-8 border max-w-md w-full shadow-xl"
-            >
-              <h4 className="text-lg font-bold font-heading mb-6 flex items-center gap-2">
+            <div className=" absolute inset-0 bg-grid-pattern opacity-30 -z-10"/>
+
+            <motion.div
+              initial={{
+                opacity:0,
+                x:20
+              }}
+
+              whileInView={{
+                opacity:1,
+                x:0
+              }}
+
+              viewport={{
+                once:true
+              }}
+
+              transition={{
+                duration:0.6
+              }}
+
+              className=" rounded-3xl p-8 max-w-md w-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-slate-200 dark:border-white/10 shadow-2xl">
+              <h4 className="text-lg font-bold font-heading mb-6 flex items-center gap-2 text-slate-950 dark:text-white ">
                 <Shield className="h-5 w-5 text-blue-500" />
-                <span>Security & Performance Audit</span>
+                <span>
+                  Security & Performance Audit
+                </span>
               </h4>
               <ul className="space-y-4 text-sm">
-                <li className="flex justify-between border-b pb-2.5 border-slate-200 dark:border-white/5">
-                  <span className="text-muted-foreground">SOC2 Certification</span>
-                  <span className="font-bold text-green-500 flex items-center gap-1"><CheckCircle2 className="h-4 w-4" /> Pass</span>
+                <li
+                  className="
+                  flex
+                  justify-between
+                  border-b
+                  pb-3
+                  border-slate-200
+                  dark:border-white/10
+                  "
+                >
+                  <span className="text-slate-600 dark:text-slate-300">
+                    SOC2 Certification
+                  </span>
+                  <span className="font-bold text-green-500 flex items-center gap-1">
+                    <CheckCircle2 className="h-4 w-4" />
+                    Pass
+                  </span>
                 </li>
-                <li className="flex justify-between border-b pb-2.5 border-slate-200 dark:border-white/5">
-                  <span className="text-muted-foreground">Data Encryption (AES-256)</span>
-                  <span className="font-bold text-green-500 flex items-center gap-1"><CheckCircle2 className="h-4 w-4" /> Active</span>
+                <li
+                  className=" flex justify-between border-b pb-3 border-slate-200 dark:border-white/10"
+                >
+                  <span className="text-slate-600 dark:text-slate-300">
+                    Data Encryption (AES-256)
+                  </span>
+                  <span className="font-bold text-green-500 flex items-center gap-1">
+                    <CheckCircle2 className="h-4 w-4" />
+                    Active
+                  </span>
                 </li>
-                <li className="flex justify-between border-b pb-2.5 border-slate-200 dark:border-white/5">
-                  <span className="text-muted-foreground">Global API Latency</span>
-                  <span className="font-bold text-slate-900 dark:text-white">&lt; 85ms</span>
+                <li
+                  className=" flex justify-between border-b pb-3 border-slate-200 dark:border-white/10">
+                  <span className="text-slate-600 dark:text-slate-300">
+                    Global API Latency
+                  </span>
+                  <span className="font-bold text-slate-950 dark:text-white">
+                    &lt; 85ms
+                  </span>
                 </li>
-                <li className="flex justify-between">
-                  <span className="text-muted-foreground">Load Balancing Scaling</span>
-                  <span className="font-bold text-slate-900 dark:text-white">Auto (Kubernetes)</span>
+
+                <li className=" flex justify-between ">
+                  <span className="text-slate-600 dark:text-slate-300">
+                    Load Balancing Scaling
+                  </span>
+                  <span className="font-bold text-slate-950 dark:text-white">
+                    Auto (Kubernetes)
+                  </span>
                 </li>
               </ul>
             </motion.div>
           </div>
-
         </div>
       </section>
 

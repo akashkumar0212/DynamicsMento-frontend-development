@@ -1,152 +1,67 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Cpu, Mail, Phone, MapPin,} from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
-import faviconLogo from '../assets/favicon.png';
+import faviconLogo from "../assets/favicon.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-50 dark:bg-[#060a12] border-t border-slate-200 dark:border-white/5 pt-20 pb-10 transition-colors duration-300">
+    <footer className="bg-gradient-to-br from-white via-slate-50 to-blue-50/70 dark:from-[#111827] dark:via-[#0f172a] dark:to-[#111827] border-t border-slate-200 dark:border-white/10 transition-colors duration-300 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
-        
-        {/* Company Info */}
+
         <div className="lg:col-span-2 space-y-6">
-          <Link to="/" className="flex items-center space-x-2.5">
-            {/* Updated Container for the PNG Logo */}
-            <div className="h-10 w-15 rounded-lg bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-0.1 shadow-md group-hover:scale-105 transition-transform duration-300">
-              <img 
-                src={faviconLogo} 
-                alt="Dynamics Mento Logo" 
-                className="h-full w-full object-contain" 
-              />
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="h-12 w-16 rounded-xl bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-slate-200 dark:border-white/10 shadow-lg flex items-center justify-center p-1">
+              <img src={faviconLogo} alt="Dynamics Mento Logo" className="h-full w-full object-contain" />
             </div>
+
             <div>
-              <span className="font-heading text-lg font-bold tracking-tight text-slate-700 dark:text-white">
-                DYNAMICS
-              </span>
-              <span className="font-heading text-lg font-medium tracking-tight text-blue-500 dark:text-blue-400 ml-1">
-                MENTO
-              </span>
+              <span className="font-heading text-lg font-bold text-slate-800 dark:text-white">DYNAMICS</span>
+              <span className="font-heading text-lg font-medium text-blue-600 dark:text-blue-400 ml-1">MENTO</span>
             </div>
           </Link>
-          <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
+
+          <p className="text-sm text-slate-600 dark:text-slate-300 max-w-sm leading-relaxed">
             Enterprise-grade engineering, strategic consultation, and automated cloud solutions. Orchestrating digital architecture for global organizations.
           </p>
-          {/* Social Links */}
-          <div className="flex items-center space-x-4">
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="h-9 w-9 rounded-lg bg-slate-200/50 dark:bg-white/5 text-muted-foreground hover:text-primary hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center transition-all duration-300"
-            >
-              <FaLinkedin className="h-4 w-4" />
+
+          <div className="flex items-center gap-4">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="h-10 w-10 rounded-xl bg-white/70 dark:bg-white/10 border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:text-black hover:-translate-y-1 transition-all">
+              <FaLinkedin />
             </a>
-            <a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="h-9 w-9 rounded-lg bg-slate-200/50 dark:bg-white/5 text-muted-foreground hover:text-primary hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center transition-all duration-300"
-            >
-              <FaTwitter className="h-4 w-4" />
+
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="h-10 w-10 rounded-xl bg-white/70 dark:bg-white/10 border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:text-black hover:-translate-y-1 transition-all">
+              <FaTwitter />
             </a>
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="h-9 w-9 rounded-lg bg-slate-200/50 dark:bg-white/5 text-muted-foreground hover:text-primary hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center transition-all duration-300"
-            >
-              <FaGithub className="h-4 w-4" />
+
+            <a href="https://github.com" target="_blank" rel="noreferrer" className="h-10 w-10 rounded-xl bg-white/70 dark:bg-white/10 border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:text-black hover:-translate-y-1 transition-all">
+              <FaGithub />
             </a>
           </div>
         </div>
 
-        {/* Practices Links */}
-        <div>
-          <h4 className="font-heading text-xs font-bold tracking-wider text-slate-900 dark:text-white uppercase mb-5">
-            Solutions
-          </h4>
-          <ul className="space-y-3.5">
-            <li>
-              <Link to="/solutions/d365-crm" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                D365 CRM
-              </Link>
-            </li>
-            <li>
-              <Link to="/solutions/d365-finops" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                D365 FinOps
-              </Link>
-            </li>
-            <li>
-              <Link to="/solutions/erp" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Business Central
-              </Link>
-            </li>
-            <li>
-              <Link to="/solutions/sap" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Copilot & AI Solutions
-              </Link>
-            </li>
-            <li>
-              <Link to="/solutions/ai" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Power Platform & Power Automate
-              </Link>
-            </li>
-            <li>
-              <Link to="/solutions/cloud" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Finance Transformation
-              </Link>
-            </li>
-          </ul>
-        </div>
+        <FooterColumn title="Solutions" items={["D365 CRM","D365 FinOps","Business Central","Copilot & AI Solutions","Power Platform & Power Automate","Finance Transformation"]}/>
 
-        {/* Company Links */}
-        <div>
-          <h4 className="font-heading text-xs font-bold tracking-wider text-slate-900 dark:text-white uppercase mb-5">
-            Company
-          </h4>
-          <ul className="space-y-3.5">
-            <li>
-              <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/case-studies" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Case Studies
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Contact Info
-              </Link>
-            </li>
-            <li>
-              <span className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                Careers
-              </span>
-            </li>
-          </ul>
-        </div>
+        <FooterColumn title="Company" items={["About Us","Case Studies","Contact Info","Careers"]}/>
 
-        {/* Contact Info */}
         <div>
-          <h4 className="font-heading text-xs font-bold tracking-wider text-slate-900 dark:text-white uppercase mb-5">
-            Contact
-          </h4>
-          <ul className="space-y-3.5 text-sm text-muted-foreground">
-            <li className="flex items-start space-x-2.5">
-              <MapPin className="h-4.5 w-4.5 text-primary shrink-0 mt-0.5" />
-              <span>Office 228, Orbit Plaza, Crossing Republik, Ghaziabad,  UP, India</span>
+          <h4 className="font-heading text-xs font-bold tracking-wider uppercase text-slate-900 dark:text-white mb-5">Contact</h4>
+
+          <ul className="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+            <li className="flex gap-3">
+              <MapPin className="h-5 w-5 text-Blck shrink-0"/>
+              <span>Office 228, Orbit Plaza, Crossing Republik, Ghaziabad, UP, India</span>
             </li>
-            <li className="flex items-center space-x-2.5">
-              <Phone className="h-8 w-4.5 text-primary shrink-0" />
+
+            <li className="flex items-center gap-3">
+              <Phone className="h-5 w-5 text-black"/>
               <span>+91 (120 4481981)</span>
             </li>
-            <li className="flex items-center space-x-2.5">
-              <Mail className="h-8 w-4.5 text-primary shrink-0" />
+
+            <li className="flex items-center gap-3">
+              <Mail className="h-5 w-5 text-black"/>
               <span>info@dynamicsmento.com</span>
             </li>
           </ul>
@@ -154,16 +69,31 @@ export default function Footer() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 mt-16 pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col md:flex-row items-center justify-between text-xs text-muted-foreground gap-4">
-        <div>
-          &copy; {currentYear} Dynamics Mentos Consulting. All rights reserved.
-        </div>
-        <div className="flex space-x-6">
-          <span className="hover:text-primary cursor-pointer transition-colors">Privacy Policy</span>
-          <span className="hover:text-primary cursor-pointer transition-colors">Terms of Service</span>
-          <span className="hover:text-primary cursor-pointer transition-colors">Sitemap</span>
+      <div className="max-w-7xl mx-auto px-6 md:px-8 mt-16 pt-8 border-t border-slate-200 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+        <div>© {currentYear} Dynamics Mentos Consulting. All rights reserved.</div>
+
+        <div className="flex gap-6">
+          <span className="hover:text-black cursor-pointer">Privacy Policy</span>
+          <span className="hover:text-black cursor-pointer">Terms of Service</span>
+          <span className="hover:text-black cursor-pointer">Sitemap</span>
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterColumn({title,items}) {
+  return (
+    <div>
+      <h4 className="font-heading text-xs font-bold tracking-wider uppercase text-slate-900 dark:text-white mb-5">{title}</h4>
+
+      <ul className="space-y-3.5">
+        {items.map(item=>(
+          <li key={item}>
+            <span className="text-sm text-slate-600 dark:text-slate-300 hover:text-black cursor-pointer transition-colors">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
