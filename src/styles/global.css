@@ -41,7 +41,7 @@
   --popover: 0 0% 100%;
   --popover-foreground: 224 71.4% 4.1%;
 
-  --primary: 221.2 83.2% 53.3%;
+  --primary:162 83% 58%;
   --primary-foreground: 210 40% 98%;
 
   --secondary: 210 40% 96.1%;
@@ -64,33 +64,35 @@
 }
 
 .dark {
-  --background: 224 71.4% 4.1%;
-  --foreground: 210 40% 98%;
 
-  --card: 224 71.4% 6%;
-  --card-foreground: 210 40% 98%;
+  --background: 222 30% 16%;
+  --foreground: 210 40% 96%;
 
-  --popover: 224 71.4% 4.1%;
-  --popover-foreground: 210 40% 98%;
+  --card: 222 25% 20%;
+  --card-foreground: 210 40% 96%;
 
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --popover: 222 30% 18%;
+  --popover-foreground: 210 40% 96%;
 
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+  --primary: 262 83% 65%;
+  --primary-foreground: 210 40% 98%;
 
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --secondary: 217 25% 28%;
+  --secondary-foreground: 210 40% 96%;
 
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --muted: 217 25% 28%;
+  --muted-foreground: 215 20% 75%;
 
-  --destructive: 0 62.8% 30.6%;
+  --accent: 217 25% 28%;
+  --accent-foreground: 210 40% 96%;
+
+  --destructive: 0 60% 45%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 224.3 76.3% 48%;
+  --border: 217 20% 32%;
+  --input: 217 20% 32%;
+
+  --ring: 262 83% 65%;
 }
 
 @utility glass-panel {
@@ -100,16 +102,29 @@
 }
 
 .dark .glass-panel {
-  background-color: rgba(11, 15, 25, 0.7);
+  background-color: rgba(20, 27, 45, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @utility glass-card {
-  background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.75),
+rgba(255,255,255,0.35)
+);
+
+backdrop-filter:blur(15px);
+
+border:
+1px solid rgba(255,255,255,0.5);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.08);
+
+transition:all .3s ease;
+
 }
 
 .dark .glass-card {
@@ -147,9 +162,25 @@
 /* Custom Base Configurations */
 html, body {
   font-family: var(--font-sans);
-  background-color: hsl(var(--background));
+
+  background:
+  radial-gradient(
+    circle at top left,
+    rgba(59,130,246,0.18),
+    transparent 35%
+  ),
+  radial-gradient(
+    circle at bottom right,
+    rgba(168,85,247,0.15),
+    transparent 35%
+  ),
+  hsl(var(--background));
+
   color: hsl(var(--foreground));
-  transition: color 0.35s, background-color 0.35s;
+
+  transition:
+  color .35s,
+  background-color .35s;
 }
 
 h1, h2, h3, h4, h5, h6 {
