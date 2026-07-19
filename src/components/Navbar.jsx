@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
+        "fixed top-0 left-0 right-0 z-[9998] transition-all duration-300 w-full",
         scrolled 
           ? "py-3 glass-panel border-b shadow-lg" 
           : "py-5 bg-transparent border-b border-transparent"
@@ -90,7 +90,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.15 }}
-                  className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-80 rounded-2xl glass-panel shadow-xl border p-4 grid gap-3"
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-80 max-h-[calc(100vh-100px)] overflow-y-auto rounded-2xl z-[9999] bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-200 dark:border-slate-700 shadow-2xl p-4 grid gap-3"
                 >
                   <div className="text-xs font-semibold text-muted-foreground/60 uppercase px-2 mb-1">Our Practices</div>
                   {solutions.map((solution) => {
@@ -130,13 +130,13 @@ export default function Navbar() {
         {/* Right side items */}
         <div className="hidden md:flex items-center space-x-4">
           {/* Theme Switcher */}
-          <button
+          {/* <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-slate-100 dark:hover:bg-white/5 transition-colors focus:outline-none"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
+          </button> */}
 
           <Link 
             to="/contact" 

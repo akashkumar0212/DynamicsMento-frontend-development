@@ -213,7 +213,7 @@ export default function Home() {
       {/* Services Grid Section */}
       <section id="services" className="py-24 max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-4 mb-20">
-          <h2 className="text-xs font-bold uppercase text-primary tracking-wider">Consulting Capabilities</h2>
+          <h2 className="text-xs font-bold uppercase text-blue-400 tracking-wider">Consulting Capabilities</h2>
           <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Comprehensive Digital Practice Areas
           </h3>

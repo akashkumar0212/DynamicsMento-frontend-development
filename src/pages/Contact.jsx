@@ -12,7 +12,7 @@ export default function Contact(){
     <div className="w-full pt-32 pb-20 space-y-16 max-w-5xl mx-auto px-6 md:px-8">
 
       <div className="space-y-4 text-center max-w-2xl mx-auto">
-        <h1 className="text-xs font-bold uppercase text-blue-300 tracking-wider">Connect With Us</h1>
+        <h1 className="text-xs font-bold uppercase text-blue-400 tracking-wider">Connect With Us</h1>
         <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight font-heading text-blue-500">
           Schedule Consultation
         </h2>

@@ -34,8 +34,8 @@ export default function CaseStudies() {
       
       {/* Title */}
       <div className="space-y-4 text-center max-w-2xl mx-auto">
-        <h1 className="text-xs font-bold uppercase text-primary tracking-wider">Client Outcomes</h1>
-        <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight font-heading">
+        <h1 className="text-xs font-bold uppercase text-blue-400 tracking-wider">Client Outcomes</h1>
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-blue-500 tracking-tight font-heading">
           Case Studies
         </h2>
         <p className="text-muted-foreground leading-relaxed">
@@ -53,7 +53,7 @@ export default function CaseStudies() {
               className="glass-card rounded-3xl p-6 border flex flex-col justify-between space-y-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="space-y-4 text-left">
-                <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                <span className="inline-block text-xs font-bold text-blue-500 bg-primary/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   {study.tag}
                 </span>
                 <h3 className="font-heading font-extrabold text-xl text-slate-900 dark:text-white leading-snug">
@@ -69,7 +69,7 @@ export default function CaseStudies() {
                 <div className="text-sm font-semibold text-blue-600 dark:text-blue-400">
                   {study.metric}
                 </div>
-                <div className="flex items-center space-x-1.5 text-xs font-bold text-slate-900 dark:text-white cursor-pointer hover:text-primary transition-colors">
+                <div className="flex items-center space-x-1.5 text-xs font-bold text-slate-900 dark:text-white cursor-pointer hover:text-blue-500 transition-colors">
                   {/* <span>Read Full Report</span> */}
                   <a
                       href={study.report}
