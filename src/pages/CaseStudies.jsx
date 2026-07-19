@@ -4,26 +4,29 @@ import { ArrowRight, BarChart3, Cloud, HelpCircle } from "lucide-react";
 export default function CaseStudies() {
   const cases = [
     {
-      title: "Global Logistics Provider Migrates to D365 FinOps",
-      client: "LogiGroup International",
+      title: "D365 Finance & Operations Enhancement Program",
+      client: "Canon Medical Systems ANZ",
       metric: "52% reduction in warehouse routing latency",
       tag: "ERP & FinOps",
-      icon: BarChart3
+      icon: BarChart3,
+      report: "\public\\reports\\Canon_Medical_ANZ_D365FO_Case_Study.pdf"
     },
     {
-      title: "Generative AI Assistant for Financial Services Compliance",
-      client: "Capital Trust Corp",
+      title: "Enterprise Dynamics 365 Transformation",
+      client: "GEMS Education",
       metric: "94% accuracy in compliance verification audits",
-      tag: "AI Solutions",
-      icon: HelpCircle
+      tag: "ERP & FinOps",
+      icon: HelpCircle,
+      report: "\public\\reports\\GEMS_Education_D365_Case_Study.pdf"
     },
-    {
-      title: "Legacy Datacenter Lift-and-Shift to Microsoft Azure",
-      client: "MedNet Systems Group",
-      metric: "$2.4M saved annually in infrastructure costs",
-      tag: "Cloud Transformation",
-      icon: Cloud
-    }
+    // {
+    //   title: "Legacy Datacenter Lift-and-Shift to Microsoft Azure",
+    //   client: "MedNet Systems Group",
+    //   metric: "$2.4M saved annually in infrastructure costs",
+    //   tag: "Cloud Transformation",
+    //   icon: Cloud
+    //   report: "/reports/canon-report.pdf"
+    // }
   ];
 
   return (
@@ -67,7 +70,14 @@ export default function CaseStudies() {
                   {study.metric}
                 </div>
                 <div className="flex items-center space-x-1.5 text-xs font-bold text-slate-900 dark:text-white cursor-pointer hover:text-primary transition-colors">
-                  <span>Read Full Report</span>
+                  {/* <span>Read Full Report</span> */}
+                  <a
+                      href={study.report}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Read Full Report</span>
+                  </a>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </div>
               </div>
