@@ -4,20 +4,24 @@ import RootLayout from "../layouts/RootLayout";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import CaseStudies from "../pages/CaseStudies";
+import CaseStudyDetail from "../pages/CaseStudyDetail";
 import Contact from "../pages/Contact";
 import SolutionDetail from "../pages/SolutionDetail";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function AppRouter() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="case-studies" element={<CaseStudies />} />
+          <Route path="case-studies/:slug" element={<CaseStudyDetail />} />
           <Route path="contact" element={<Contact />} />
           <Route path="solutions/:slug" element={<SolutionDetail />} />
-          {/* Fallback redirect */}
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>

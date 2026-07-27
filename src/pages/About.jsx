@@ -1,23 +1,42 @@
 import React from "react";
 import { Users, Shield, Target, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
+
 
 export default function About() {
   return (
     <div className="w-full pt-32 pb-20 space-y-24 max-w-5xl mx-auto px-6 md:px-8">
 
-      <div className="space-y-4 text-center max-w-2xl mx-auto">
-        <h1 className="text-xs font-bold uppercase text-blue-400 tracking-wider">
-          About Our Firm
-        </h1>
+        <div className="space-y-4 text-center max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-500/20 border border-blue-500/20 text-xs font-semibold text-blue-650 dark:text-blue-400"
+          >
+            <span>About Our Firm</span>
+          </motion.div>
 
-        <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight font-heading text-blue-500">
-          Strategic System Mentors
-        </h2>
+          <motion.h1
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl sm:text-5xl font-extrabold text-slate-905 dark:text-white tracking-tight font-heading leading-tight"
+          >
+            Strategic
+            <span className="text-gradient"> System Mentors</span>
+          </motion.h1>
 
-        <p className="text-muted-foreground leading-relaxed">
-          We bridge the gap between complex enterprise technologies and clean operational execution.
-        </p>
-      </div>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-lg text-slate-500 dark:text-slate-400 leading-relaxed"
+          >
+            We bridge the gap between complex enterprise technologies and clean operational execution.
+          </motion.p>
+        </div>
+
 
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
