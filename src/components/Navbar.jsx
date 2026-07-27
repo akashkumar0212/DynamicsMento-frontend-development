@@ -56,12 +56,15 @@ export default function Navbar() {
           />
         </div>
         <div className="flex items-center">
-          <span className="font-heading text-lg font-extrabold tracking-tight text-black dark:text-white">
-            DYNAMICS
-          </span>
-          <span className="font-heading text-lg font-extrabold tracking-tight text-blue-600 dark:text-blue-400 ml-1">
-            MENTO
-          </span>
+          <motion.h1
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl sm:text-4xl font-extrabold text-slate-905 dark:text-white tracking-tight font-heading leading-tight"
+          >
+            Dynamics
+            <span className="text-gradient"> Mento</span>
+          </motion.h1>
         </div>
       </Link>
 
@@ -149,14 +152,14 @@ export default function Navbar() {
 
         {/* Mobile controls & toggle */}
         <div className="flex items-center space-x-3 md:hidden">
-          {/* Theme Switcher */}
+          {/* Theme Switcher
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-slate-100 dark:hover:bg-white/5 transition-colors focus:outline-none"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
+          </button> */}
 
           {/* Menu button */}
           <button

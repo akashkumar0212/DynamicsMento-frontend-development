@@ -146,7 +146,7 @@ export default function Home() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="glass-card rounded-3xl p-6 shadow-2xl w-full max-w-sm space-y-6 relative z-10 border border-white/20 dark:border-white/5"
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between border-b border-slate-100 pb-4">
                 <div className="flex items-center space-x-2">
                   <div className="w-3.5 h-3.5 rounded-full bg-red-500" />
                   <div className="w-3.5 h-3.5 rounded-full bg-yellow-500" />
@@ -157,30 +157,25 @@ export default function Home() {
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between text-xs font-semibold mb-1">
-                    <span>Azure Cloud Migration</span>
+                      <div className="text-slate-900 font-bold">GEMS ERP Sync</div>
                     <span className="text-blue-500">Active - 94%</span>
                   </div>
+                  <div className="text-[10px] text-slate-400">Unified compliance platform</div>
                   <div className="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
                     <div className="bg-blue-500 h-full w-[94%]" />
                   </div>
                 </div>
                 <div>
                   <div className="flex justify-between text-xs font-semibold mb-1">
-                    <span>AI Model Fine-tuning</span>
+                    <span>Canon Scan API</span>
                     <span className="text-teal-500">Ready</span>
                   </div>
+                    <div className="text-[10px] text-slate-400">Advanced barcode tracking</div>
                   <div className="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
                     <div className="bg-teal-500 h-full w-full" />
                   </div>
                 </div>
                 <div>
-                  <div className="flex justify-between text-xs font-semibold mb-1">
-                    <span>SAP S/4HANA Sync</span>
-                    <span className="text-purple-500">Syncing...</span>
-                  </div>
-                  <div className="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
-                    <div className="bg-purple-500 h-full w-[67%]" />
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -190,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className=" py-16 bg-gradient-to-br from-white via-slate-50 to-blue-50/70 dark:from-[#111827] dark:via-[#0f172a] dark:to-[#111827] border-y border-slate-200/80 dark:border-white/10 transition-colors duration-300">
+      <section className=" py-5 bg-gradient-to-br from-white via-slate-50 to-blue-50/70 dark:from-[#111827] dark:via-[#0f172a] dark:to-[#111827] border-y border-slate-200/80 dark:border-white/10 transition-colors duration-300">
 
         <div className=" max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-8" >
           {stats.map((stat) => (
@@ -277,7 +272,7 @@ export default function Home() {
                 Enterprise Framework
               </h2>
               <h3
-                className=" text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 dark:text-white" >
+                className=" text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-955 dark:text-white" >
                 Architected for High Scale and Security
               </h3>
               <p className=" text-slate-600 dark:text-slate-300 leading-relaxed text-base max-w-xl" >
@@ -308,7 +303,7 @@ export default function Home() {
                     <CheckCircle2 className="h-4 w-4" />
                   </div>
                   <div>
-                    <h4 className=" text-base font-bold font-heading text-slate-950 dark:text-white">
+                    <h4 className=" text-base font-bold font-heading text-slate-955 dark:text-white">
                       {item.title}
                     </h4>
                     <p className=" text-sm text-slate-600 dark:text-slate-300 mt-1 ">
@@ -344,7 +339,7 @@ export default function Home() {
               }}
 
               className=" rounded-3xl p-8 max-w-md w-full bg-white/90 dark:bg-white/10 backdrop-blur-xl border border-slate-200 dark:border-white/10 shadow-2xl">
-              <h4 className="text-lg font-bold font-heading mb-6 flex items-center gap-2 text-slate-950 dark:text-white ">
+              <h4 className="text-lg font-bold font-heading mb-6 flex items-center gap-2 text-slate-955 dark:text-white ">
                 <Shield className="h-5 w-5 text-blue-500" />
                 <span>
                   Security & Performance Audit
@@ -385,7 +380,7 @@ export default function Home() {
                   <span className="text-slate-600 dark:text-slate-300">
                     Global API Latency
                   </span>
-                  <span className="font-bold text-slate-950 dark:text-white">
+                  <span className="font-bold text-slate-955 dark:text-white">
                     &lt; 85ms
                   </span>
                 </li>
@@ -394,7 +389,7 @@ export default function Home() {
                   <span className="text-slate-600 dark:text-slate-300">
                     Load Balancing Scaling
                   </span>
-                  <span className="font-bold text-slate-950 dark:text-white">
+                  <span className="font-bold text-slate-955 dark:text-white">
                     Auto (Kubernetes)
                   </span>
                 </li>
