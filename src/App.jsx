@@ -4,7 +4,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="dynamics-mentos-theme">
+    <ThemeProvider defaultTheme="light" storageKey="dynamics-mentos-theme">
       <AppRouter />
     </ThemeProvider>
   );
