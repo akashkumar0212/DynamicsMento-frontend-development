@@ -41,7 +41,7 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-[9998] transition-all duration-300 w-full",
         scrolled 
-          ? "py-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-blue-500/10 dark:border-white/5 shadow-md shadow-blue-500/[0.02]" 
+          ? "py-3 bg-white/80  backdrop-blur-md border-b border-blue-500/10 shadow-md shadow-blue-500/[0.02]" 
           : "py-5 bg-transparent border-b border-transparent"
       )}
     >
@@ -60,7 +60,7 @@ export default function Navbar() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl sm:text-2xl font-black text-slate-900 dark:text-white font-heading bg-clip-text"
+              className="text-2xl sm:text-2xl font-black text-slate-900 font-heading bg-clip-text"
             >
               Dynamics Mento
             </motion.h1>
@@ -74,8 +74,8 @@ export default function Navbar() {
             className={cn(
               "text-sm font-semibold transition-all duration-200 py-1.5 px-3 rounded-lg relative hover:bg-blue-50/50 dark:hover:bg-white/5",
               location.pathname === "/" 
-                ? "text-blue-650 dark:text-white font-bold bg-blue-50/80 dark:bg-white/10" 
-                : "text-slate-600 dark:text-slate-300 hover:text-blue-600"
+                ? "text-blue-650 font-bold bg-blue-50/80 dark:bg-white/10" 
+                : "text-slate-600 hover:text-blue-600"
             )}
           >
             Home
@@ -87,7 +87,7 @@ export default function Navbar() {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button className="flex items-center space-x-1.5 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors py-1.5 px-3 rounded-lg hover:bg-blue-50/50 dark:hover:bg-white/5 focus:outline-none">
+            <button className="flex items-center space-x-1.5 text-sm font-semibold text-slate-600 hover:text-blue-600 dark:hover:text-white transition-colors py-1.5 px-3 rounded-lg hover:bg-blue-50/50 dark:hover:bg-white/5 focus:outline-none">
               <span>Solutions</span>
               <ChevronDown className={cn("h-4 w-4 transition-transform duration-300", isDropdownOpen && "rotate-180")} />
             </button>
@@ -102,7 +102,7 @@ export default function Navbar() {
                   transition={{ duration: 0.2 }}
                   className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-80 max-h-[calc(100vh-120px)] overflow-y-auto rounded-2xl z-[9999] bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-blue-500/10 dark:border-white/5 shadow-2xl p-4 grid gap-2.5"
                 >
-                  <div className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest px-2 mb-0.5">Our Practices</div>
+                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2 mb-0.5">Our Practices</div>
                   {solutions.map((solution) => {
                     const Icon = solution.icon;
                     return (

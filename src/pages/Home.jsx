@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Cpu, Cloud, Database, BarChart3, Compass, HelpCircle, Shield, Users, Zap, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Cpu, Cloud, Database, BarChart3, Compass, HelpCircle, Shield, Users, Zap, CheckCircle2, Award } from "lucide-react";
 
 const services = [
   {
@@ -312,45 +312,77 @@ export default function Home() {
 
           {/* Right Audit Card */}
           <div className="relative flex justify-center">
-            <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none -z-10" />
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="rounded-3xl p-8 max-w-md w-full bg-white border border-slate-200 shadow-xl shadow-blue-500/[0.01]"
-            >
-              <h4 className="text-lg font-bold font-heading mb-6 flex items-center gap-2 text-slate-900">
-                <Shield className="h-5 w-5 text-blue-600" />
-                <span>Security & Performance Audit</span>
-              </h4>
-              <ul className="space-y-4 text-sm text-left">
-                <li className="flex justify-between border-b pb-3 border-slate-100">
-                  <span className="text-slate-500 font-semibold">SOC2 Certification</span>
-                  <span className="font-bold text-emerald-600 flex items-center gap-1">
-                    <CheckCircle2 className="h-4 w-4" />
-                    Pass
-                  </span>
-                </li>
-                <li className="flex justify-between border-b pb-3 border-slate-100">
-                  <span className="text-slate-500 font-semibold">Data Encryption (AES-256)</span>
-                  <span className="font-bold text-emerald-600 flex items-center gap-1">
-                    <CheckCircle2 className="h-4 w-4" />
-                    Active
-                  </span>
-                </li>
-                <li className="flex justify-between border-b pb-3 border-slate-100">
-                  <span className="text-slate-500 font-semibold">Global API Latency</span>
-                  <span className="font-bold text-slate-900">&lt; 85ms</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-slate-500 font-semibold">Load Balancing Scaling</span>
-                  <span className="font-bold text-slate-900">Auto (Kubernetes)</span>
-                </li>
-              </ul>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-3xl p-8 max-w-md w-full bg-white border border-slate-200 shadow-xl shadow-blue-500/10"
+          >
+            <h4 className="text-xl font-bold font-heading mb-6 flex items-center gap-2 text-slate-900">
+              <Award className="h-6 w-6 text-blue-600" />
+              <span>Why Choose Dynamics Mento?</span>
+            </h4>
+
+            <ul className="space-y-5">
+
+              <li className="flex items-start gap-3 border-b border-slate-100 pb-4">
+                <CheckCircle2 className="h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
+                <div>
+                  <h5 className="font-semibold text-slate-900">
+                    Microsoft Certified Expertise
+                  </h5>
+                  <p className="text-sm text-slate-600 mt-1">
+                    Specialists in Dynamics 365, Power Platform, Business Central,
+                    Azure and Copilot solutions.
+                  </p>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-3 border-b border-slate-100 pb-4">
+                <CheckCircle2 className="h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
+                <div>
+                  <h5 className="font-semibold text-slate-900">
+                    End-to-End Delivery
+                  </h5>
+                  <p className="text-sm text-slate-600 mt-1">
+                    From consulting and implementation to migration, integration,
+                    automation and ongoing support.
+                  </p>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-3 border-b border-slate-100 pb-4">
+                <CheckCircle2 className="h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
+                <div>
+                  <h5 className="font-semibold text-slate-900">
+                    Industry-Focused Solutions
+                  </h5>
+                  <p className="text-sm text-slate-600 mt-1">
+                    Tailored ERP and CRM solutions designed around your business
+                    processes and growth goals.
+                  </p>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
+                <div>
+                  <h5 className="font-semibold text-slate-900">
+                    Long-Term Partnership
+                  </h5>
+                  <p className="text-sm text-slate-600 mt-1">
+                    Dedicated support, proactive optimisation and continuous
+                    innovation to maximise your Microsoft investment.
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </motion.div>
+        </div>
         </div>
       </section>
 
