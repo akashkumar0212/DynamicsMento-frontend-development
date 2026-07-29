@@ -32,7 +32,7 @@ export default function CaseStudies() {
   ];
 
   return (
-    <div className="w-full pt-32 pb-24 relative overflow-hidden bg-transparent text-slate-700 dark:text-slate-300">
+    <div className="w-full pt-36 pb-24 relative overflow-hidden bg-transparent text-slate-700">
       {/* Background glow mesh */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-radial-glow pointer-events-none -z-10" />
 
@@ -44,7 +44,7 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-500/20 border border-blue-500/20 text-xs font-semibold text-blue-650 dark:text-blue-400"
+            className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-55 border border-blue-150/50 text-xs font-bold text-blue-655 shadow-sm"
           >
             <span>Client Success Stories</span>
           </motion.div>
@@ -53,17 +53,16 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl font-extrabold text-slate-905 dark:text-white tracking-tight font-heading leading-tight"
+            className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight font-heading leading-tight"
           >
-            Client Outcomes & <br />
-            <span className="text-gradient">Case Studies</span>
+            Client Outcomes & <br /> Case Studies
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-slate-500 dark:text-slate-400 leading-relaxed"
+            className="text-lg text-slate-500 leading-relaxed font-medium"
           >
             See how our hands-on engineering guidance helps organizations automate operations and achieve quantifiable business improvements.
           </motion.p>
@@ -80,7 +79,7 @@ export default function CaseStudies() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
                 key={study.slug} 
-                className="group rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.02] shadow-lg hover:shadow-2xl transition-all duration-305 flex flex-col justify-between overflow-hidden"
+                className="group rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden"
               >
                 {/* Metric/Image Header */}
                 <div className={`p-8 bg-gradient-to-tr ${study.color} text-white flex flex-col justify-between min-h-[220px] relative`}>
@@ -96,39 +95,39 @@ export default function CaseStudies() {
                   </div>
 
                   <div className="space-y-1">
-                    <div className="text-3xl sm:text-4xl font-extrabold font-heading">{study.metric}</div>
-                    <div className="text-xs uppercase font-bold tracking-widest text-blue-100">{study.metricLabel}</div>
+                    <div className="text-4xl sm:text-5xl font-black font-heading tracking-tight">{study.metric}</div>
+                    <div className="text-xs uppercase font-extrabold tracking-widest text-blue-100/90">{study.metricLabel}</div>
                   </div>
                 </div>
 
                 {/* Body Content */}
                 <div className="p-8 space-y-6 flex-grow flex flex-col justify-between">
                   <div className="space-y-4">
-                    <div className="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-450">
+                    <div className="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-blue-600">
                       <span>Client:</span>
-                      <span className="text-slate-800 dark:text-slate-200">{study.client}</span>
-                      <span className="text-slate-200 dark:text-slate-700">|</span>
+                      <span className="text-slate-900">{study.client}</span>
+                      <span className="text-slate-200">|</span>
                       <span>Sector:</span>
-                      <span className="text-slate-800 dark:text-slate-200">{study.industry}</span>
+                      <span className="text-slate-905">{study.industry}</span>
                     </div>
 
-                    <h3 className="font-heading font-extrabold text-2xl text-slate-900 dark:text-white leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="font-heading font-black text-2xl text-slate-900 leading-snug group-hover:text-blue-600 transition-colors">
                       {study.title}
                     </h3>
 
-                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    <p className="text-sm text-slate-500 leading-relaxed">
                       {study.summary}
                     </p>
                   </div>
 
                   {/* Actions footer */}
-                  <div className="pt-6 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
+                  <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
                     <Link
                       to={`/case-studies/${study.slug}`}
-                      className="flex items-center space-x-2.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/btn"
+                      className="flex items-center space-x-2.5 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors group/btn"
                     >
                       <span>Explore Case Study</span>
-                      <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                      <ArrowRight className="h-3.5 w-3.5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </Link>
                   </div>
                 </div>
@@ -138,7 +137,7 @@ export default function CaseStudies() {
         </section>
 
         {/* Dynamic statistics callout */}
-        <section className="rounded-3xl border border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-white/[0.01] p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <section className="rounded-3xl border border-blue-500/10 bg-[#F1F8FF] p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           {[
             { icon: TrendingUp, title: "100% Delivery Rate", desc: "Every single Microsoft Dynamics implementation project delivered on time and within budget parameters." },
             { icon: Award, title: "Industry Recognition", desc: "Praised by executives for collaborative mentoring methods that help client developers succeed." },
@@ -147,11 +146,11 @@ export default function CaseStudies() {
             const Icon = stat.icon;
             return (
               <div key={idx} className="space-y-3">
-                <div className="h-9 w-9 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+                <div className="h-10 w-10 rounded-xl bg-blue-50 border border-blue-500/10 text-blue-600 flex items-center justify-center shadow-sm">
                   <Icon className="h-4.5 w-4.5" />
                 </div>
-                <h4 className="font-bold text-base font-heading text-slate-800 dark:text-slate-200">{stat.title}</h4>
-                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{stat.desc}</p>
+                <h4 className="font-bold text-base font-heading text-slate-900">{stat.title}</h4>
+                <p className="text-xs text-slate-500 leading-relaxed font-medium">{stat.desc}</p>
               </div>
             );
           })}

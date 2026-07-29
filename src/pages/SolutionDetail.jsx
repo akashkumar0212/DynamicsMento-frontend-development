@@ -104,40 +104,40 @@ export default function SolutionDetail() {
   const Icon = solution.icon;
 
   return (
-    <div className="w-full pt-32 pb-24 max-w-5xl mx-auto px-6 md:px-8 space-y-16">
+    <div className="w-full pt-36 pb-24 max-w-5xl mx-auto px-6 md:px-8 space-y-16 text-slate-700">
       
       {/* Back link */}
       <Link 
         to="/" 
-        className="inline-flex items-center space-x-1.5 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
+        className="inline-flex items-center space-x-1.5 text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors group"
       >
-        <ArrowLeft className="h-4 w-4" />
+        <ArrowLeft className="h-4 w-4 group-hover:-translate-x-0.5 transition-transform duration-305" />
         <span>Solutions</span>
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
         {/* Solution Head */}
-        <div className="lg:col-span-7 space-y-6">
-          <div className="h-14 w-14 rounded-2xl bg-white text-black flex items-center justify-center shadow-sm">
+        <div className="lg:col-span-7 space-y-6 text-left">
+          <div className="h-14 w-14 rounded-2xl bg-blue-50 border border-blue-500/10 text-blue-650 flex items-center justify-center shadow-sm">
             <Icon className="h-7 w-7" />
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight font-heading leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight font-heading leading-tight text-slate-900">
             {solution.title}
           </h1>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-500 leading-relaxed font-medium">
             {solution.desc}
           </p>
         </div>
 
         {/* Feature List Card */}
-        <div className="lg:col-span-5 glass-card rounded-3xl p-8 border">
-          <h3 className="font-heading font-bold text-lg mb-6 text-slate-900 dark:text-white">Core Capabilities</h3>
-          <ul className="space-y-4">
+        <div className="lg:col-span-5 rounded-3xl p-8 border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all duration-300">
+          <h3 className="font-heading font-extrabold text-lg mb-6 text-slate-900">Core Capabilities</h3>
+          <ul className="space-y-4 text-left">
             {solution.features.map((feature, idx) => (
               <li key={idx} className="flex items-start space-x-3">
-                <CheckCircle2 className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
-                <span className="text-sm text-foreground leading-normal">{feature}</span>
+                <CheckCircle2 className="h-5 w-5 text-emerald-555 shrink-0 mt-0.5" />
+                <span className="text-sm text-slate-500 font-medium leading-normal">{feature}</span>
               </li>
             ))}
           </ul>
@@ -146,16 +146,16 @@ export default function SolutionDetail() {
       </div>
 
       {/* CTA Box */}
-      <div className="rounded-3xl bg-slate-50 dark:bg-[#070b15] border p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 transition-colors duration-300">
+      <div className="rounded-3xl bg-[#F1F8FF] border border-blue-500/5 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 transition-all duration-300">
         <div className="space-y-2 text-left">
-          <h4 className="font-heading font-bold text-black/70">Need consultation on {solution.name}?</h4>
-          <p className="text-sm text-black/80 max-w-md">
+          <h4 className="font-heading font-extrabold text-slate-909 text-lg">Need consultation on {solution.name}?</h4>
+          <p className="text-sm text-slate-505 font-medium max-w-md">
             Connect with our lead systems architects to review specifications, timelines, and budgets.
           </p>
         </div>
         <Link 
           to="/contact" 
-          className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm hover:scale-[1.02] shadow-md transition-all duration-300 shrink-0"
+          className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold text-sm hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-blue-500/10 hover:shadow-blue-500/25 transition-all duration-300 shrink-0"
         >
           Speak with a Mentor
         </Link>
