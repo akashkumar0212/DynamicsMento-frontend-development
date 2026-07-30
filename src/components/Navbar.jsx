@@ -40,8 +40,8 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-[9998] transition-all duration-300 w-full",
-        scrolled 
-          ? "py-3 bg-white/80  backdrop-blur-md border-b border-blue-500/10 shadow-md shadow-blue-500/[0.02]" 
+        scrolled
+          ? "py-3 bg-white/80  backdrop-blur-md border-b border-blue-500/10 shadow-md shadow-blue-500/[0.02]"
           : "py-5 bg-transparent border-b border-transparent"
       )}
     >
@@ -49,7 +49,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3 group">
           <div className="h-11 w-15 rounded-xl bg-white border border-blue-500/10 flex items-center justify-center p-1 shadow-md transition-transform duration-300 group-hover:scale-[1.02]">
-            <img 
+            <img
               src={faviconLogo}
               alt="Dynamics Mento Logo"
               className="h-full w-full object-contain"
@@ -69,12 +69,12 @@ export default function Navbar() {
 
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center space-x-7">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className={cn(
               "text-sm font-semibold transition-all duration-200 py-1.5 px-3 rounded-lg relative hover:bg-blue-50/50 dark:hover:bg-white/5",
-              location.pathname === "/" 
-                ? "text-blue-650 font-bold bg-blue-50/80 dark:bg-white/10" 
+              location.pathname === "/"
+                ? "text-blue-650 font-bold bg-blue-50/80 dark:bg-white/10"
                 : "text-slate-600 hover:text-blue-600"
             )}
           >
@@ -82,7 +82,7 @@ export default function Navbar() {
           </Link>
 
           {/* Solutions Dropdown Trigger */}
-          <div 
+          <div
             className="relative"
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
@@ -126,34 +126,34 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <Link 
-            to="/about" 
+          <Link
+            to="/about"
             className={cn(
               "text-sm font-semibold transition-all duration-200 py-1.5 px-3 rounded-lg relative hover:bg-blue-50/50 dark:hover:bg-white/5",
-              location.pathname === "/about" 
-                ? "text-blue-650 dark:text-white font-bold bg-blue-50/80 dark:bg-white/10" 
+              location.pathname === "/about"
+                ? "text-blue-650 dark:text-white font-bold bg-blue-50/80 dark:bg-white/10"
                 : "text-slate-600 dark:text-slate-300 hover:text-blue-600"
             )}
           >
             About
           </Link>
-          <Link 
-            to="/case-studies" 
+          <Link
+            to="/case-studies"
             className={cn(
               "text-sm font-semibold transition-all duration-200 py-1.5 px-3 rounded-lg relative hover:bg-blue-50/50 dark:hover:bg-white/5",
-              location.pathname === "/case-studies" 
-                ? "text-blue-650 dark:text-white font-bold bg-blue-50/80 dark:bg-white/10" 
+              location.pathname === "/case-studies"
+                ? "text-blue-650 dark:text-white font-bold bg-blue-50/80 dark:bg-white/10"
                 : "text-slate-600 dark:text-slate-300 hover:text-blue-600"
             )}
           >
             Case Studies
           </Link>
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className={cn(
               "text-sm font-semibold transition-all duration-200 py-1.5 px-3 rounded-lg relative hover:bg-blue-50/50 dark:hover:bg-white/5",
-              location.pathname === "/contact" 
-                ? "text-blue-650 dark:text-white font-bold bg-blue-50/80 dark:bg-white/10" 
+              location.pathname === "/contact"
+                ? "text-blue-650 dark:text-white font-bold bg-blue-50/80 dark:bg-white/10"
                 : "text-slate-600 dark:text-slate-300 hover:text-blue-600"
             )}
           >
@@ -163,14 +163,18 @@ export default function Navbar() {
 
         {/* Right side items */}
         <div className="hidden md:flex items-center space-x-4">
-          <Link 
-            to="/contact" 
-            className="flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold text-sm shadow-md shadow-blue-500/10 hover:shadow-blue-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+          <Link
+            to="/contact"
+            className={cn(
+              "flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold text-sm shadow-md shadow-blue-500/10 hover:shadow-blue-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300",
+              location.pathname === "/contact" && "invisible"
+            )}
           >
             <span>Get Started</span>
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
+
 
         {/* Mobile controls & toggle */}
         <div className="flex items-center space-x-3 md:hidden">
@@ -196,13 +200,13 @@ export default function Navbar() {
             className="md:hidden w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-blue-500/10 dark:border-white/5 mt-2 overflow-hidden shadow-xl"
           >
             <div className="flex flex-col space-y-4 px-6 py-6 max-h-[85vh] overflow-y-auto text-left">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="text-base font-bold text-slate-800 dark:text-slate-100 py-1.5 border-b border-slate-100 dark:border-white/5"
               >
                 Home
               </Link>
-              
+
               <div className="flex flex-col space-y-2.5">
                 <span className="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500 tracking-wider">Solutions</span>
                 <div className="grid grid-cols-1 gap-2.5 pl-2">
@@ -219,20 +223,20 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className="text-base font-bold text-slate-800 dark:text-slate-100 py-1.5 border-b border-slate-100 dark:border-white/5"
               >
                 About
               </Link>
-              <Link 
-                to="/case-studies" 
+              <Link
+                to="/case-studies"
                 className="text-base font-bold text-slate-800 dark:text-slate-100 py-1.5 border-b border-slate-100 dark:border-white/5"
               >
                 Case Studies
               </Link>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="text-base font-bold text-slate-800 dark:text-slate-100 py-1.5 border-b border-slate-100 dark:border-white/5"
               >
                 Contact

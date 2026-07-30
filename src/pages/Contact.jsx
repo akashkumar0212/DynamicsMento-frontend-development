@@ -186,8 +186,8 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                 {[
-                  ["name","Full Name","e.g. John Doe"],
-                  ["email","Email Address","john@company.com"],
+                  ["name","Full Name","Enter your name"],
+                  ["email","Email Address","Enter your email"],
                   ["company","Company Name","e.g. Microsoft"],
                 ].map(([id,label,placeholder])=>(
                   <div key={id} className="space-y-2">
@@ -225,6 +225,7 @@ export default function Contact() {
                     <option>Copilot & AI Solutions</option>
                     <option>Finance Transformation</option>
                     <option>Power Platform</option>
+                    <option>Others</option>
                   </select>
 
                 </div>
